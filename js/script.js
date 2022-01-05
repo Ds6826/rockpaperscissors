@@ -18,5 +18,13 @@ $("#shoot").click(function() {
     $(".computerChoice").text(computerChoice);
 });
 
-
-
+let result="";
+if(choice === computerChoice){
+  result="tie.";
+} else if(choice === "Rock"&& computerChoice === "Scissors"){
+  result="You win.";
+}else if (choice ==="Paper"&& computerChoice === "Rock"){
+  result="You win.";
+} else if (choice ==="Scissors"&& computerChoice === "Paper"){
+  result="You win.";
+}
