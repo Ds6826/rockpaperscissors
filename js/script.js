@@ -1,5 +1,7 @@
 let randomNumber = 0;
 let choices=["rock","paper","scissors"];
+let computerChoice="No choice.";
+
 $("#shoot").click(function() {
   let user = $("input").val();
   $("#userChoice").text(user);
@@ -7,7 +9,7 @@ $("#shoot").click(function() {
   $("#computerChoice").text(choices[randomNumber]);
     console.log(choices[20]);
 
-    let computerChoice="No choice.";
+    
     if(randomNumber<=1){
       computerChoice="Rock";
     } else if(randomNumber >1 && randomNumber <=2){
@@ -19,12 +21,12 @@ $("#shoot").click(function() {
 });
 
 let result="";
-if(choice === computerChoice){
+if(choices === computerChoice){
   result="tie.";
-} else if(choice === "Rock"&& computerChoice === "Scissors"){
+} else if(choices === "Rock"&& computerChoice === "Scissors"){
   result="You win.";
-}else if (choice ==="Paper"&& computerChoice === "Rock"){
+}else if (choices ==="Paper"&& computerChoice === "Rock"){
   result="You win.";
-} else if (choice ==="Scissors"&& computerChoice === "Paper"){
+} else if (choices ==="Scissors"&& computerChoice === "Paper"){
   result="You win.";
 }
